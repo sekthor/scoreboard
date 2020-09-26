@@ -23,7 +23,7 @@ public class Controller {
 
     public void writeStringToFile(String string, String file) {
         try {
-            FileWriter writer = new FileWriter(file, true);
+            FileWriter writer = new FileWriter(file, false);
             writer.write(string);
             writer.close();
         } catch (IOException e) {
