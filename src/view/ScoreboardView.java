@@ -18,13 +18,13 @@ public class ScoreboardView {
 
     public ScoreboardView(Stage stage) {
 
+        // make Labels
         Label team1 = new Label("Home");
         Label team2 = new Label("Visitor");
         Label name = new Label("Name");
         Label score = new Label("Score");
 
-
-
+        // make textfields and update button
         this.team1Name = new TextField();
         this.team2Name = new TextField();
         this.team1Score = new TextField();
@@ -32,7 +32,7 @@ public class ScoreboardView {
         this.update = new Button("update");
 
 
-        // create main pane
+        // create an fill main pane
         GridPane main = new GridPane();
         main.add(team1,0,0);
         main.add(team2, 2,0);

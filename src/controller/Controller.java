@@ -13,7 +13,7 @@ public class Controller {
         view.getUpdate().setOnAction(event -> update(view));
     }
 
-    //
+    // updates each file with current text from corresponding Text field
     private void update(ScoreboardView view) {
         writeStringToFile(view.getHomeName(), "home.txt");
         writeStringToFile(view.getVisitorName(), "visitor.txt");
@@ -21,7 +21,8 @@ public class Controller {
         writeStringToFile(view.getVisitorScore(), "visitor-score.txt");
     }
 
-    public void writeStringToFile(String string, String file) {
+    // overwrites contents of "file" with current "string"
+    private void writeStringToFile(String string, String file) {
         try {
             FileWriter writer = new FileWriter(file, false);
             writer.write(string);
